@@ -1,0 +1,7 @@
+flows:
+  bus_list_bought_tickets:
+    name: bus list bought tickets
+    description: |
+      Listing all previously bought bus tickets.
+    steps:
+      - action: utter_bought_bus_tickets

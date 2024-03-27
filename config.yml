@@ -9,10 +9,15 @@ pipeline:
     request_timeout: 7
     temperature: 0.0
     top_p: 0.0
+  flow_retrieval:
+    embeddings:
+      type: openai
+      model: text-embedding-3-small
+    turns_to_embed: 1
+    should_embed_slots: false
+    num_flows: 5
 
 policies:
-- name: rasa.core.policies.flow_policy.FlowPolicy
-- name: rasa_plus.ml.EnterpriseSearchPolicy
-- name: rasa_plus.ml.IntentlessPolicy
-
-#  - name: RulePolicy
+- name: FlowPolicy
+- name: EnterpriseSearchPolicy
+- name: IntentlessPolicy

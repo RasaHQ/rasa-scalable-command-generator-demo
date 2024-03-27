@@ -1,0 +1,25 @@
+flows:
+  hotel_booking:
+    description: |
+      Booking for one or more individuals for a certain duration.
+    name: hotel booking
+
+    steps:
+      - collect: hotel_name
+        description: Name of the hotel.
+
+      - collect: hotel_check_in_date
+        description: Check-in date for the hotel booking.
+
+      - collect: hotel_check_out_date
+        description: Check-out date to determine the end of the stay.
+
+      - collect: hotel_accommodation_type
+        description: Type of accommodation the user prefers.
+
+      - collect: hotel_number_of_people_staying
+        description: Number of people who will be staying at the hotel.
+
+      - collect: book_hotel_confirmation
+
+      - action: utter_book_hotel

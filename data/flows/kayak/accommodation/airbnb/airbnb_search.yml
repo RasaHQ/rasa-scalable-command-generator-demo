@@ -1,0 +1,7 @@
+flows:
+  airbnb_search:
+    name: airbnb search
+    description: |
+      Searching for various accommodations that are offered through airbnb
+    steps:
+      - action: utter_airbnb_inform_rating

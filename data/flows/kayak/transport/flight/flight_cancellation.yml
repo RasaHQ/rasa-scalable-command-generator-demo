@@ -1,0 +1,12 @@
+flows:
+  flight_cancellation:
+    description: |
+      Canceling a booked flight ticket by verifying users ticket number.
+    name: flight cancellation
+
+    steps:
+      - collect: order_number
+        description: the flight booking order number
+      - collect: cancellation_reason
+        description: the reason of the cancellation
+      - link: process_refund

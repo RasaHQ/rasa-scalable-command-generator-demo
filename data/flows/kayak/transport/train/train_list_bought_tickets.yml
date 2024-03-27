@@ -1,0 +1,7 @@
+flows:
+  train_list_bought_tickets:
+    name: train list bought tickets
+    description: |
+      Listing all train tickets user has preciously bought.
+    steps:
+      - action: utter_list_bought_train_tickets

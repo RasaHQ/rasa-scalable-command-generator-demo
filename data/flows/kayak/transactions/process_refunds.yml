@@ -1,0 +1,9 @@
+flows:
+  process_refund:
+    description: |
+      Manage and process refund requests for cancellations or changes in bookings.
+    name: process refund
+    steps:
+      - collect: process_refund_method
+        description: various refund options
+      - action: utter_refund_on_the_way

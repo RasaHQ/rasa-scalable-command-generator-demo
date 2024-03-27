@@ -1,0 +1,14 @@
+flows:
+  bus_filter_trips:
+    description: Filtering departures for bus trips based on specific criteria.
+    name: bus filter trips
+    steps:
+      - collect: bus_departure_location
+        description: departure location (city, bus station)
+      - collect: bus_departure_time
+        description: arrival location (city, bus station)
+      - collect: bus_departure_date
+        description: the date when the bus should departure and start the trip
+      - collect: bus_arrival_date
+        description: the date when the bus finish the trip
+      - action: utter_show_bus_trips

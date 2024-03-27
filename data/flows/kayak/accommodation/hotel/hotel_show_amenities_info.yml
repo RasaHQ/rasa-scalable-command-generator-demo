@@ -1,0 +1,8 @@
+flows:
+  hotel_show_amenities_info:
+    description: Showing overview of amenities offered by a specific hotel.
+    name: hotel show amenities
+    steps:
+     - collect: hotel_name
+       description: Name of the hotel.
+     - action: utter_show_hotel_amenities

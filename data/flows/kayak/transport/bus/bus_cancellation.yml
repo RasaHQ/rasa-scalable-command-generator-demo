@@ -1,0 +1,12 @@
+flows:
+  bus_cancellation:
+    description: |
+      Canceling (and refunding if possible) a bought ticket for bus trip.
+    name: bus cancellation
+    steps:
+      - collect: order_number
+        description: the order number of the booked bus ticket
+        ask_before_filling: true
+      - collect: cancellation_reason
+        description: the reason of the cancellation
+      - link: process_refund

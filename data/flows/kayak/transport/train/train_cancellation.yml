@@ -1,0 +1,11 @@
+flows:
+  train_cancellation:
+    description: |
+      Canceling and previously bought train ticket by verifying users ticket number. Refunding is not always possible.
+    name: train cancellation
+    steps:
+      - collect: order_number
+        description: the order number of the booked train ticket
+      - collect: cancellation_reason
+        description: the reason of the cancellation
+      - link: process_refund

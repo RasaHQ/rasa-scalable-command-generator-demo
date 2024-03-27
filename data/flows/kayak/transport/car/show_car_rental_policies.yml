@@ -1,0 +1,8 @@
+flows:
+  show_car_rental_company_policies:
+    description: Policies (rules) of the specific car rental company.
+    name: show car rental company policies
+    steps:
+      - collect: car_rental_company
+        description: Name of the car rental company.
+      - action: utter_show_car_rental_policies

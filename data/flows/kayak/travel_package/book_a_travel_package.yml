@@ -1,0 +1,19 @@
+flows:
+  book_a_travel_package:
+    always_include_in_prompt: true
+    description: |
+      Booking a traveling package that includes both accommodation (hotel/airbnb) and a transportation to it
+      (flight/bus/train). Only starts if user explicitly mentions that he wants a travel package.
+    name: book a travel package
+    steps:
+      - collect: travel_package_departure
+        description: the city the user is departing from
+      - collect: travel_package_arrival
+        description: the city the user wants to stay
+      - collect: travel_package_start_date
+        description: the start date of the travel package
+      - collect: travel_package_end_date
+        description: the end date of the travel package
+      - collect: travel_package_preferred_transport_method
+        description: the users preferred transport method
+      - action: utter_travel_package_booked

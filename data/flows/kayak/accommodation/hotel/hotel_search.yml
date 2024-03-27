@@ -3,5 +3,4 @@ flows:
     name: search for hotels
     description: search for hotels
     steps:
-      - action: action_search_hotel
       - action: utter_hotel_inform_rating

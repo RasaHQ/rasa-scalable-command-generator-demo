@@ -1,0 +1,11 @@
+flows:
+  hotel_cancellation:
+    description: |
+      Canceling stay at hotel.
+    name: hotel_cancellation
+    steps:
+      - collect: order_number
+        description: the reservation number used to identify users hotel booking.
+      - collect: cancellation_reason
+        description: the reason of the cancellation
+      - link: process_refund
